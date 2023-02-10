@@ -6,8 +6,14 @@
 
 # 1: Write a method named greeting that returns a string with a general greeting. 
 
-# What is the return value of your method?
-# How many arguments did you pass your method?
+def greeting(name)
+    "Hi, #{name}!"
+end
+
+p greeting ("Jess")
+p greeting ("John")
+# What is the return value of your method? Jess and John
+# How many arguments did you pass your method? 2
 
 
 # 2: Write a method named custom_greeting that returns a greeting WITH a specific name.
