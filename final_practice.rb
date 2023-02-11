@@ -6,49 +6,80 @@
 
 # 1: Write a method named greeting that returns a string with a general greeting. 
 
-def greeting(name)
-    "Hi, #{name}!"
+def greeting
+    "Hi!"
 end
 
-p greeting ("Jess")
-p greeting ("John")
-# What is the return value of your method? Jess and John
-# How many arguments did you pass your method? 2
+puts greeting
+greeting
+# What is the return value of your method? Hi!
+# How many arguments did you pass your method? 0
 
 
 # 2: Write a method named custom_greeting that returns a greeting WITH a specific name.
 
-# What is the return value of your method?
-# How many arguments did you pass your method?
-# What data type was your argument(s)?
+def custom_greeting(name)
+    "Hi #{name}"
+end
+
+puts custom_greeting("Phil")
+puts  custom_greeting("Willis")
+
+# What is the return value of your method? Hi Phil and Hi Willis
+# How many arguments did you pass your method? 2
+# What data type was your argument(s)? String data
 
 
 # 3: Write a method named greet_person that takes in 3 strings, a first, middle, and last name, and returns a sentence with the full name.
 
-# What is the return value of your method?
-# How many arguments did you pass your method?
-# What data type was your argument(s)?
+def greet_person(first, mid, last)
+    "Hi #{first} #{mid} #{last}!"
+end
+
+puts greet_person("John", "Jacob", "Jingleheimershmidt")
+puts greet_person("Phil", "Willis", "Marshal")
+
+# What is the return value of your method? Hi John Jacob Jingleheimershmidt! and Hi Phil Willis Marshal!
+# How many arguments did you pass your method? 6
+# What data type was your argument(s)? strings
 
 
 # 4: Write a method named square that takes in one integer, and returns the square of that integer.
 # Bonus: Print a sentence that interpolates the return value of your square method.
 
-# What is the return value of your method?
-# How many arguments did you pass your method?
-# What data type was your argument(s)?
+def square(num)
+    num * num
+end
+
+puts square(8)
+puts square(374658)
+
+# What is the return value of your method? 64 and 140368616964
+# How many arguments did you pass your method? 2
+# What data type was your argument(s)? an integer.
 
 
 # 5: Write a method named check_stock that satisfies the following interaction pattern:
 # Hint: You will only write one check_stock method that checks the quantity and then prints the corresponding statement.
 
+def check_stock(num, item)
+    if num >= 4 
+        puts "#{item} is stocked"
+    elsif
+        num >= 1
+        puts "#{item} - running LOW"
+    else
+        puts "#{item} - OUT of stock!"
+    end
+end
 check_stock(4, "Coffee");
-# => "Coffee is stocked"
+# # => "Coffee is stocked"
 
 check_stock(3, "Tortillas");
-# => "Tortillas - running LOW"
+# # # => "Tortillas - running LOW"
 
 check_stock(0, "Cheese");
-# => "Cheese - OUT of stock!"
+#  # => "Cheese - OUT of stock!"
 
 check_stock(1, "Salsa");
-# => "Salsa - running LOW"
+# # => "Salsa - running LOW"
