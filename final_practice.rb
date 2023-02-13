@@ -63,23 +63,25 @@ puts square(374658)
 # Hint: You will only write one check_stock method that checks the quantity and then prints the corresponding statement.
 
 def check_stock(num, item)
+    stock_report = ""
     if num >= 4 
-        puts "#{item} is stocked"
+        stock_report = "#{item} is stocked"
     elsif
-        num >= 1
-        puts "#{item} - running LOW"
+        num == 0
+        stock_report = "#{item} - OUT of stock"
     else
-        puts "#{item} - OUT of stock!"
+        stock_report = "#{item} - running LOW"
     end
+    stock_report
 end
-check_stock(4, "Coffee");
+p check_stock(4, "Coffee");
 # # => "Coffee is stocked"
 
-check_stock(3, "Tortillas");
+p check_stock(3, "Tortillas");
 # # # => "Tortillas - running LOW"
 
-check_stock(0, "Cheese");
+p check_stock(0, "Cheese");
 #  # => "Cheese - OUT of stock!"
 
-check_stock(1, "Salsa");
+p check_stock(1, "Salsa");
 # # => "Salsa - running LOW"
